@@ -287,6 +287,14 @@
   .footer-cta .inner { position: relative; z-index: 2; max-width: 520px; margin: 0 auto; }
   .footer-cta h2 { color: #fff; font-size: clamp(1.5rem, 3.2vw, 2rem); line-height: 1.25; }
   .footer-cta p { color: rgba(255,255,255,.88); font-size: 14px; line-height: 1.7; margin: 16px 0 26px; }
+  .subscribe-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 22px 24px;
+    max-width: 420px;
+    margin: 0 auto;
+    box-shadow: 0 20px 44px -18px rgba(20,4,36,.5);
+  }
   .btn {
     display: inline-flex; align-items: center; gap: 8px;
     font-family: var(--tech); font-size: 12.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
@@ -408,11 +416,32 @@
   <div class="inner">
     <h2>¿Quieres recibir esto cada semana en tu correo?</h2>
     <p>Sin spam, sin tecnicismos — solo lo que de verdad puede ayudarte a mejorar tu presencia digital.</p>
-    <a class="btn" href="#">Suscribirme gratis</a>
+    <div class="subscribe-card">
+      <div style="text-align: left" class="sender-form-field" data-sender-form-id="aOYxmr"></div>
+    </div>
   </div>
 </section>
 
 <footer class="site-footer">Anna al d<span class="ia-hl">IA</span> — un boletín de Florece con Anna</footer>
+
+<script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er;
+    s[er] = s[er] || function () {
+      (s[er].q = s[er].q || []).push(arguments)
+    }, s[er].l = 1 * new Date();
+    s[er].on = function(event, callback) {
+      s[er].listeners = s[er].listeners || {};
+      (s[er].listeners[event] = s[er].listeners[event] || []).push(callback);
+    };
+    var a = e.createElement(n),
+        m = e.getElementsByTagName(n)[0];
+    a.async = 1;
+    a.src = d;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('85cae6dad44021')
+</script>
 
 <div class="backdrop" id="backdrop">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
