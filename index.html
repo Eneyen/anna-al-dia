@@ -218,8 +218,15 @@
       radial-gradient(circle at 25% 30%, rgba(255,255,255,.5), transparent 55%),
       linear-gradient(135deg, var(--accent-2) 0%, var(--brand-700) 55%, var(--accent) 100%);
   }
+  .featured-art img, .card-art img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .featured-art.has-photo::after, .card-art.has-photo::after {
+    content: ''; position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(to top, rgba(20,4,36,.55) 0%, rgba(20,4,36,.05) 65%);
+  }
   .featured-art .kicker {
-    position: absolute; left: 22px; bottom: 18px;
+    position: absolute; left: 22px; bottom: 18px; z-index: 2;
     font-family: var(--tech); font-size: 11px; font-weight: 700;
     letter-spacing: .12em; text-transform: uppercase; color: #fff;
     background: rgba(0,0,0,.22); padding: 6px 12px; border-radius: 999px;
@@ -395,7 +402,7 @@
 
 <main class="wrap stories">
   <button class="featured" data-index="0">
-    <div class="featured-art art-a"><span class="kicker">OpenAI / ChatGPT</span></div>
+    <div class="featured-art art-a has-photo"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=70" alt="" loading="lazy"><span class="kicker">OpenAI / ChatGPT</span></div>
     <div class="featured-body">
       <h2>OpenAI lanza un programa gratuito de formación en IA para negocios pequeños</h2>
       <p>OpenAI anunció el 21 de julio un programa dirigido específicamente a pequeños negocios: formación práctica gratuita, guías para empezar desde cero y acceso a un asistente capaz de encargarse de tareas repetitivas conectadas a las herramientas que ya usas. Si llevas tu negocio sola y todavía te da respeto meterte con la IA, esto significa que tienes formación pensada para gente sin conocimientos técnicos, sin necesidad de aprender a programar — solo a pedirle las cosas bien.</p>
@@ -466,6 +473,7 @@
   const stories = [
     {
       cat: "OpenAI / ChatGPT", art: "art-a",
+      img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=70",
       title: "OpenAI lanza un programa gratuito de formación en IA para negocios pequeños",
       date: "27 jul 2026",
       text: [
@@ -476,6 +484,7 @@
     },
     {
       cat: "Formación online", art: "art-b",
+      img: "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?w=1200&q=70",
       title: "Las academias online empiezan a usar IA para responder matrículas y dudas al instante",
       date: "28 jul 2026",
       text: [
@@ -486,6 +495,7 @@
     },
     {
       cat: "Vídeo con IA", art: "art-c",
+      img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=70",
       title: "Hacer un vídeo para Reels o Stories ya no requiere cámara ni editor",
       date: "29 jul 2026",
       text: [
@@ -496,6 +506,7 @@
     },
     {
       cat: "Herramientas", art: "art-d",
+      img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=70",
       title: "Las herramientas sin código incorporan IA para automatizar tareas sin programar",
       date: "30 jul 2026",
       text: [
@@ -506,6 +517,7 @@
     },
     {
       cat: "Automatización", art: "art-e",
+      img: "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=1200&q=70",
       title: "Cada vez más negocios pequeños atienden WhatsApp con IA, sin perder el toque humano",
       date: "31 jul 2026",
       text: [
@@ -516,6 +528,7 @@
     },
     {
       cat: "Privacidad", art: "art-f",
+      img: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=1200&q=70",
       title: "Qué puedes (y qué no puedes) hacer con los datos de tus clientas al usar IA",
       date: "1 ago 2026",
       text: [
@@ -526,6 +539,7 @@
     },
     {
       cat: "Anthropic / Claude", art: "art-a",
+      img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=70",
       title: "Cómo conseguir mejores respuestas de Claude o ChatGPT: dale contexto, no solo la pregunta",
       date: "2 ago 2026",
       text: [
@@ -543,7 +557,7 @@
     card.className = "card";
     card.dataset.index = realIndex;
     card.innerHTML = `
-      <div class="card-art ${s.art}"><span class="kicker">${s.cat}</span></div>
+      <div class="card-art ${s.art}${s.img ? ' has-photo' : ''}">${s.img ? `<img src="${s.img}" alt="" loading="lazy">` : ''}<span class="kicker">${s.cat}</span></div>
       <div class="card-body">
         <h3>${s.title}</h3>
         <span class="card-cta">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
