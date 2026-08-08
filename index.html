@@ -479,83 +479,94 @@
 </div>
 
 <script>
-  const stories = [
+    const stories = [
     {
-      cat: "OpenAI / ChatGPT", art: "art-a",
-      img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=70",
-      title: "OpenAI lanza un programa gratuito de formación en IA para negocios pequeños",
-      date: "27 jul 2026",
+      cat: "Anthropic / Claude", art: "art-b",
+      img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=70",
+      title: "Claude Skills: entrenar tu propia IA sin repetir las mismas instrucciones",
+      date: "2 ago 2026",
       text: [
-        "OpenAI anunció el 21 de julio un programa dirigido específicamente a pequeños negocios: formación práctica gratuita (webinars y guías paso a paso) y acceso a un asistente capaz de encargarse de tareas repetitivas conectadas a las herramientas que ya usas.",
-        "Si llevas tu negocio sola y todavía te da respeto meterte con la IA, esto significa que tienes formación gratis pensada para gente sin conocimientos técnicos — nada de programar, solo aprender a pedir bien las cosas."
+        "Claude acaba de lanzar en versión beta pública un nuevo sistema que permite guardar comportamientos reutilizables directamente en la IA — es decir, en lugar de tener que escribir cada vez el mismo párrafo explicando cómo quieres que funcione, lo guardas una sola vez y listo.",
+        "Esto es especialmente útil si eres coach, terapeuta o docente con tu propia forma de explicar las cosas. Significa que podrías crear un \"modo Anna\" personalizado que conoce tu voz, tu audiencia y tus casos de uso — sin necesidad de configurar nada técnico."
       ],
-      source: "OpenAI — Introducing the ChatGPT for small business program (openai.com)"
+      source: "Anthropic — Claude Skills en beta pública (anthropic.com)"
     },
     {
-      cat: "Formación online", art: "art-b",
-      img: "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?w=1200&q=70",
-      title: "Las academias online empiezan a usar IA para responder matrículas y dudas al instante",
-      date: "28 jul 2026",
-      text: [
-        "Cada vez más escuelas y academias usan agentes de IA para atender consultas sobre horarios, precios y programas las 24 horas del día, sin aumentar personal, dejando a la formadora libre para lo que de verdad importa: enseñar.",
-        "Si tienes una escuela online (o estás pensando en montarla), esto significa que podrías automatizar las preguntas que se repiten cada semana — \"¿cuándo empieza el curso?\", \"¿cuánto cuesta?\" — sin tener que responderlas tú una a una."
-      ],
-      source: "Resolvo — IA para Academias y Centros de Formación (resolvo.consulting)"
-    },
-    {
-      cat: "Vídeo con IA", art: "art-c",
+      cat: "Automatización", art: "art-c",
       img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=70",
-      title: "Hacer un vídeo para Reels o Stories ya no requiere cámara ni editor",
-      date: "29 jul 2026",
+      title: "n8n: la herramienta de automatización que ahora trae IA integrada (y es completamente gratis instalada)",
+      date: "3 ago 2026",
       text: [
-        "Las herramientas de vídeo con IA han avanzado tanto que ya se puede generar un vídeo corto y cuidado a partir de un simple texto o guion, con voz, música y subtítulos incluidos — e Instagram ya integra funciones parecidas directamente en Reels y Stories.",
-        "Esto significa que podrías crear contenido para promocionar tus sesiones o talleres sin depender de saber grabar o editar, ni de contratar a nadie."
+        "n8n es una plataforma de automatización (como Zapier o Make) que combina más de 400 integraciones con IA nativa — puedes conectar tus aplicaciones, automatizar flujos de trabajo complejos, y ahora incluso meter agentes de IA dentro de tus automatizaciones, todo sin escribir código.",
+        "A diferencia de Zapier, n8n es de código abierto y puedes instalarlo gratis en tu propio servidor si quieres. Esto significa que si tienes un negocio pequeño y no quieres pagar por cada automatización, puedes crear tu propio \"asistente digital\" que gestiona tu agenda, responde emails, o conecta tu formulario con tu CRM."
       ],
-      source: "Metricool — Las 12 mejores herramientas de IA para redes sociales en 2026"
+      source: "n8n — AI Workflow Automation Platform (n8n.io)"
     },
     {
-      cat: "Herramientas", art: "art-d",
+      cat: "Instagram", art: "art-d",
+      img: "https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=1200&q=70",
+      title: "Instagram cambió cómo funcionan los Reels — ahora tú controlas qué tipo de contenido ves",
+      date: "4 ago 2026",
+      text: [
+        "En junio, Instagram llevó los controles de 'Tu algoritmo' directamente al feed principal. Ahora puedes ver exactamente qué temas te está recomendando la IA, cambiarlos en vivo, y priorizar ciertos tipos de contenido. Además, Meta mejoró las herramientas de edición de Reels con IA para sincronizar vídeos automáticamente con la música.",
+        "Para creadores, esto significa que el contenido que publiques llegará mejor si lo haces cuando realmente vale la pena, no solo cuando \"crees que toca\". Y para usuarios de Instagram, que por fin tienes control real sobre qué tipo de contenido consume tu tiempo."
+      ],
+      source: "Meta News — Instagram Reels Updates (meta.com)"
+    },
+    {
+      cat: "Herramientas", art: "art-e",
       img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=70",
-      title: "Las herramientas sin código incorporan IA para automatizar tareas sin programar",
-      date: "30 jul 2026",
+      title: "Microsoft 365 Copilot: IA invisiblemente integrada en las herramientas que ya usas",
+      date: "5 ago 2026",
       text: [
-        "Plataformas como Bubble, Make o n8n están metiendo IA directamente en sus editores visuales, permitiendo crear automatizaciones — como conectar tu formulario de contacto con tu agenda — sin escribir ni una línea de código.",
-        "Esto significa que tareas repetitivas de tu negocio, como avisar a una clienta cuando confirma cita, se pueden automatizar tú misma, sin depender de un programador."
+        "Microsoft está metiendo IA directamente dentro de sus aplicaciones — Copilot en Outlook resume largas cadenas de correos automáticamente, en Word te ayuda a escribir mejor, en Excel analiza datos complejos. No es un programa aparte: es tu herramienta de siempre, pero más lista.",
+        "Si trabajas con Office (Word, Excel, Outlook), esto significa que ya tienes IA asistente integrada sin hacer nada. La IA está ahí, invisible, haciendo tareas que antes te tomaban tiempo — simplifica el trabajo sin que tengas que aprender a usar nada nuevo."
       ],
-      source: "El Ecosistema Startup — APIs no-code 2026: herramientas que ahorran tiempo"
-    },
-    {
-      cat: "Automatización", art: "art-e",
-      img: "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=1200&q=70",
-      title: "Cada vez más negocios pequeños atienden WhatsApp con IA, sin perder el toque humano",
-      date: "31 jul 2026",
-      text: [
-        "Ya es posible configurar un asistente de IA que responda a las consultas más frecuentes por WhatsApp (horarios, precios, disponibilidad) fuera de tu horario — eso sí, la ley exige que quede claro que es un asistente, no tú en persona.",
-        "Esto significa que podrías dejar de perder clientas por no responder a tiempo, sin tener que estar pegada al móvil a todas horas."
-      ],
-      source: "CEUPE — WhatsApp Business e IA: cómo automatizar la atención al cliente en 2026"
+      source: "Microsoft — Copilot in Microsoft 365 (microsoft.com)"
     },
     {
       cat: "Privacidad", art: "art-f",
       img: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=1200&q=70",
-      title: "Qué puedes (y qué no puedes) hacer con los datos de tus clientas al usar IA",
-      date: "1 ago 2026",
-      text: [
-        "Con el nuevo Reglamento de IA europeo ya en marcha en 2026, usar IA para gestionar datos de clientas exige cumplir el RGPD igual que siempre — la IA no exime de nada, y las multas por incumplir pueden ser muy altas.",
-        "Si trabajas con información sensible (como terapeuta, coach o sanadora), esto significa que antes de meter datos de tus clientas en cualquier IA conviene asegurarte de que esa herramienta cumple RGPD — la AEPD tiene guías gratuitas pensadas para autónomas."
-      ],
-      source: "Audidat — RGPD y AI Act en 2026: obligaciones para empresas"
-    },
-    {
-      cat: "Anthropic / Claude", art: "art-a",
-      img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=70",
-      title: "Cómo conseguir mejores respuestas de Claude o ChatGPT: dale contexto, no solo la pregunta",
+      title: "AI Act europeo: a partir de agosto 2026, la ley exige transparencia cuando usas IA",
       date: "2 ago 2026",
       text: [
-        "Según varias guías recientes, la clave para obtener buenas respuestas no es escribir \"bien\" el prompt, sino darle contexto real: quién eres, para quién es lo que pides, y qué tono quieres — y pedirle que primero te haga preguntas si algo no está claro, en vez de lanzarse a responder.",
-        "Esto significa que la próxima vez que le pidas algo a una IA, en vez de \"hazme un texto para Instagram\", prueba con \"soy terapeuta holística, esto es para seguidoras que no saben nada de este tema, quiero un tono cercano, sin tecnicismos\" — la diferencia en el resultado es enorme."
+        "El 2 de agosto de 2026, la Ley de IA de la Unión Europea entró completamente en vigor. Esto significa nuevas obligaciones: si usas IA en tu negocio (aunque sea ChatGPT para redactar), debes ser transparente y documentar cómo la usas, especialmente si maneja datos personales de clientes.",
+        "Para autónomas y pequeños negocios, esto principalmente significa: haz un inventario de las herramientas de IA que usas, asegúrate de que cumplen RGPD, y considera si debes avisar a tus clientes que estás usando IA. La AEPD (autoridad de privacidad española) tiene guías gratuitas para pymes — empezar ahora te evita multas después."
       ],
-      source: "El Destape — 7 trucos y consejos para aprovechar Claude al máximo"
+      source: "AEPD — Ley de IA: Obligaciones para empresas en 2026"
+    },
+    {
+      cat: "Diseño web", art: "art-a",
+      img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&q=70",
+      title: "Las webs en 2026: diseños limpios, muy rápidas, y tipografía que habla",
+      date: "6 ago 2026",
+      text: [
+        "Las tendencias de diseño web para 2026 no son solo estéticas: son estrategia. El \"floating minimalism\" (elementos que respiran en espacios en blanco), la velocidad de carga casi instantánea, y la tipografía que transmite personalidad son ahora la norma en webs profesionales.",
+        "Si vas a actualizar tu web o hacer una nueva, esto significa: no llenes la página de cosas, elige una tipografía que te represente, y obsesiónate con que cargue rápido. Un sitio rápido y limpio se percibe como más profesional y confiable — y eso afecta directamente a si la gente se queda o se va."
+      ],
+      source: "Wix Blog — Tendencias de diseño web 2026"
+    },
+    {
+      cat: "Instagram", art: "art-b",
+      img: "https://images.unsplash.com/photo-1551632786-de41ec16a compromise?w=1200&q=70",
+      title: "Instagram traductor: tus Reels ahora se pueden ver en 5 idiomas más automáticamente",
+      date: "7 ago 2026",
+      text: [
+        "Meta amplió las traducciones automáticas en Instagram Reels a francés, alemán, italiano, japonés y coreano. Esto quiere decir que si haces un Reel en español, Instagram puede mostrar subtítulos o traducción automática a usuarios en otros países, sin que tú hagas nada.",
+        "Para creadores globales o que quieran expandir audiencia, esto es oro: tu contenido en español puede llegar ahora a europeos y asiáticos sin que tengas que grabar versiones en otros idiomas. Meta hace el trabajo de traducción por ti."
+      ],
+      source: "Meta Blog — Instagram Reels Auto-Translation (meta.com)"
+    },
+    {
+      cat: "Productividad", art: "art-d",
+      img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=70",
+      title: "Zapier y Make: cuando automatizar es tan fácil que no necesitas programador",
+      date: "1 ago 2026",
+      text: [
+        "Zapier y Make (antes llamado Integromat) son plataformas que permiten conectar tus herramientas de negocio sin código: puedes hacer que un formulario en Typeform envíe automáticamente los datos a tu hoja de cálculo, que un nuevo contacto en WhatsApp se añada a tu CRM, que tu publicidad se pause si el presupuesto se agota.",
+        "Esto significa que podrías automatizar 5-10 horas de trabajo manual por semana — todas esas tareas repetitivas que haces diariamente y que nadie va a facturar por ti. Zapier tiene un plan gratuito para empezar con 100 acciones/mes, que para muchos pequeños negocios es suficiente."
+      ],
+      source: "Zapier — Automate your work (zapier.com)"
     }
   ];
 
