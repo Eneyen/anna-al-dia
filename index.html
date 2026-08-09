@@ -69,7 +69,7 @@
   h1, h2, h3 { font-family: var(--serif); font-weight: 600; margin: 0; text-wrap: balance; }
   p { text-wrap: pretty; }
 
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
 
   /* ---------- preview notice ---------- */
   .preview-flag {
@@ -147,7 +147,7 @@
     border-radius: 50%;
     pointer-events: none;
   }
-  .edition-hero-inner { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+  .edition-hero-inner { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; }
   .eyebrow-pill {
     display: inline-flex;
     align-items: center;
@@ -169,12 +169,32 @@
   }
   .eyebrow-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
   .edition-hero h1 {
-    font-size: clamp(2rem, 5vw, 3.1rem);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
     line-height: 1.12;
     margin: 22px 0 14px;
     letter-spacing: -.01em;
+    color: #331622;
+    text-transform: uppercase;
   }
-  .edition-hero h1 em { color: var(--accent); font-style: italic; }
+  @media (min-width: 640px) {
+    .edition-hero h1 {
+      font-size: 48px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .edition-hero h1 {
+      font-size: 60px;
+    }
+  }
+  .edition-hero h1 em {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #ca43b4;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
   .edition-meta {
     font-family: var(--tech);
     font-size: 12.5px;
@@ -191,7 +211,7 @@
     font-size: 16px;
     line-height: 1.625;
     color: #7D5A9B;
-    max-width: 540px;
+    max-width: 100%;
     margin: 22px auto 0;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     text-align: center;
@@ -246,7 +266,23 @@
   }
   .featured-body { padding: 26px 30px 30px; }
   .featured-body h2 { font-size: clamp(1.3rem, 2.6vw, 1.65rem); line-height: 1.28; margin-bottom: 10px; }
-  .featured-body p { font-size: 14.5px; line-height: 1.7; color: var(--ink-soft); margin: 0 0 16px; }
+  .featured-body p {
+    font-size: 16px;
+    line-height: 1.625;
+    color: #7D5A9B;
+    margin: 0 0 16px;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  @media (min-width: 640px) {
+    .featured-body p {
+      font-size: 18px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .featured-body p {
+      font-size: 20px;
+    }
+  }
   .card-cta { font-family: var(--tech); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--brand-700); display: inline-flex; align-items: center; gap: 6px; }
   :root[data-theme="dark"] .card-cta,
   @media (prefers-color-scheme: dark) { .card-cta { color: var(--brand-200); } }
@@ -255,14 +291,14 @@
   .featured:hover .card-cta svg { transform: translateX(3px); }
 
   /* ---------- grid ---------- */
-  .stories { padding: 54px 0 70px; }
-  .stories-head { max-width: 640px; margin: 0 auto 34px; text-align: center; }
+  .stories { padding: 54px 22px 70px; max-width: 1200px; margin: 0 auto; }
+  .stories-head { max-width: 100%; margin: 0 0 34px; text-align: center; }
   .stories-head .eyebrow-pill { margin-bottom: 12px; }
   .stories-head h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); }
   .stories-head p { color: var(--ink-faint); font-size: 14px; margin-top: 10px; }
 
   .grid {
-    max-width: 760px; margin: 0 auto;
+    max-width: 100%; margin: 0;
     display: grid; grid-template-columns: 1fr; gap: 16px;
   }
   @media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
@@ -287,7 +323,21 @@
     background: rgba(0,0,0,.22); padding: 5px 10px; border-radius: 999px;
   }
   .card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-  .card-body h3 { font-size: 16px; line-height: 1.35; }
+  .card-body h3 {
+    font-size: 16px;
+    line-height: 1.35;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  @media (min-width: 640px) {
+    .card-body h3 {
+      font-size: 18px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .card-body h3 {
+      font-size: 20px;
+    }
+  }
   .card-body p {
     font-size: 16px;
     line-height: 1.625;
@@ -444,7 +494,7 @@
 <section class="edition-hero">
   <div class="edition-hero-inner">
     <span class="eyebrow-pill"><span class="dot"></span> Anna al d<span class="ia-hl">IA</span> · Edición Nº 2</span>
-    <h1>Lo nuevo en <em>IA y diseño web</em>, sin ruido y en 5 minutos</h1>
+    <h1>LO NUEVO EN IA Y DISEÑO WEB, <em>SIN RUIDO Y EN 5 MINUTOS</em></h1>
     <p class="edition-meta">
       <span>Noticias interesantes del 1 al 7 de agosto</span>
       <span class="sep">·</span>
